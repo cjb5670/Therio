@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Monster: {fileID: 0}
-  Marine: {fileID: 0}
+  Marine: {fileID: 1209040505036192, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
   SpawnKey: 112
 --- !u!222 &222255165550124440
 CanvasRenderer:
