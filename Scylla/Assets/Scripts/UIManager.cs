@@ -23,4 +23,9 @@ public class UIManager : MonoBehaviour
 		SceneManager.LoadSceneAsync(scene);
 		
 	}
+
+	public void Quit()
+	{
+		Application.Quit();
+	}
 }

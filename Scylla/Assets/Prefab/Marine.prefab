@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4554854243876956}
   - component: {fileID: 95385814687216928}
+  - component: {fileID: 114541691472948842}
   m_Layer: 0
   m_Name: marine
   m_TagString: Untagged
@@ -94,7 +95,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1230101128428524
 GameObject:
   m_ObjectHideFlags: 1
@@ -1003,6 +1004,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 23cb2a930adb1834a92e74919448d4c3, type: 3}
   - {fileID: 8300000, guid: bb100970bcebd9b42ada4f9dcf9fc429, type: 3}
   Monster: {fileID: 0}
+--- !u!114 &114541691472948842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091299850346360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111f20111c701084a96b1491c67d102a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_guy: {fileID: 1209040505036192}
 --- !u!137 &137197430461272718
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

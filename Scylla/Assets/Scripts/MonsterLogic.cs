@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MonsterLogic : MonoBehaviour {
@@ -54,7 +55,7 @@ public class MonsterLogic : MonoBehaviour {
     {
         if (CurrentHealth <= 0)
         {
-            DestroyTimer(this.gameObject);
+			SceneManager.LoadSceneAsync("Lose");
         }
     }
 
