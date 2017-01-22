@@ -30,6 +30,8 @@ public class BoatAI : Movement
     public AudioClip[] m_Overboard;
     public AudioClip[] m_GroupYell;
 
+    public float ReloadTime; 
+
     private AudioSource AudioSource;
 
     #endregion
@@ -164,7 +166,7 @@ public class BoatAI : Movement
     private IEnumerator ReloadCounter()
     {
         m_reload = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(ReloadTime);
         m_reload = false;
     }
 
