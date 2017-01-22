@@ -2692,9 +2692,9 @@ MonoBehaviour:
   m_boat: {fileID: 1330985142662514}
   m_Spawner: {fileID: 114984522346594406}
   m_BoatColliderthing: {fileID: 114712643934348160}
-  MaxGuysOnBoat: 10
-  Max_Health: 100
-  Current_Health: 100
+  MaxGuysOnBoat: 20
+  Max_Health: 50
+  Current_Health: 50
   m_AttackClips:
   - {fileID: 8300000, guid: bf409cab729df2349bb0656219c75bdf, type: 3}
   - {fileID: 8300000, guid: 86fcc7356edf2d6438b102acdc41ed90, type: 3}
@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7a8da8c32870446a24a9b666e05501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHealth: 100
+  m_maxHealth: 50
   m_curHealth: 0
   m_healthBar: {fileID: 1204207249102792}
   boatAi: {fileID: 114273556114477726}
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Monster: {fileID: 0}
-  Marine: {fileID: 0}
+  Marine: {fileID: 1209040505036192, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
   SpawnKey: 112
 --- !u!222 &222255165550124440
 CanvasRenderer:
