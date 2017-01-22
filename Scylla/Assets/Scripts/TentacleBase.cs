@@ -60,6 +60,15 @@ public class TentacleBase : MonoBehaviour {
         TheMouth.evt_HasEatenMarine += TheMouth_evt_HasEatenMarine;
     }
 
+    public bool IsHoldinOntoAWall()
+    {
+        Debug.Log("afdsfadsfasdfadfds");
+        var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
+
+                Debug.Log("HAsd grabbedf wall dsa fasd f asd fa sdf a dsf? " + obj.HasGrabbedWall);
+        return obj.HasGrabbedWall;
+    }
+
     private void TheMouth_evt_HasEatenMarine(object sender, System.EventArgs e)
     {
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;

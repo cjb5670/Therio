@@ -7,7 +7,7 @@ public class TentacleJoint : MonoBehaviour
     public GameObject blood;
     public int UnitLayer;
     public int WallLayer;
-    public bool CanGrab;
+    public bool CanGrab = false;
 
     public TentacleBase Parent;
 
@@ -39,6 +39,8 @@ public class TentacleJoint : MonoBehaviour
         HasGrabbedWall = false;
         Parent.ReleaseFromWall();
         this.GetComponent<TargetJoint2D>().maxForce = 10;
+
+        Debug.Log("Grabbeadsfadsfadsfd:" + this.HasGrabbedWall.ToString());
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -69,7 +71,11 @@ public class TentacleJoint : MonoBehaviour
             this.Parent.PullToWall(wallLoc);
             
             this.HasGrabbedWall = true;
+
+        Debug.Log("Grabbeadsfadsfadsfd TRUE?:" + this.HasGrabbedWall.ToString());
         }
+
+        //Debug.Log("Grabbed:" + this.HasGrabbedWall.ToString());
     }
 
     private Vector3 mouseTarget;
