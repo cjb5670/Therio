@@ -14,16 +14,25 @@ public class BoatSpawn : MonoBehaviour
 
     }
 
+    public GameObject SpawnMarine()
+    {
+        var marine = Instantiate(Marine, new Vector3(0, 0, 0), Quaternion.identity);
+        marine.transform.position = this.transform.position;
+        marine.layer = 9;
+        marine.SetActive(true);
+        var mar_log = marine.GetComponent<GuyScript>();
+        mar_log.Monster = this.Monster; 
+
+        return marine; 
+    }
+
     // Update is called once per frame
     void Update()
     {
         //Spawn a player 
         if (Input.GetKeyDown(SpawnKey))
         {
-            var marine = Instantiate(Marine, new Vector3(0, 0, 0), Quaternion.identity);
-            marine.transform.position = this.transform.position; 
-            marine.layer = 9;
-            marine.SetActive(true);
+            SpawnMarine();
         }
     }
 

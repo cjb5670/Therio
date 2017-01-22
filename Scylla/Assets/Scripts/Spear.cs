@@ -17,7 +17,7 @@ public class Spear : Movement
     void Update()
     {
         Seek(m_target);
-        CalculateForces();
+        CalculateForces(null);
     }
 
     public void Fire(Vector3 target)
