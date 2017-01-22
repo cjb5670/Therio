@@ -5,9 +5,9 @@ using UnityEngine;
 public class GuyScript : MonoBehaviour
 {
     public event System.EventHandler evt_Drowning; 
-    public event System.EventHandler evt_Eaten; 
+    public event System.EventHandler evt_Eaten;
 
-
+    public bool drowning = true;
     public float WaterLevel;
     public float NotInWaterDrag;
     public float InWaterDrag;
@@ -64,6 +64,7 @@ public class GuyScript : MonoBehaviour
         {
             rig.drag = InWaterDrag;
             joint.enabled = true;
+            drowning = true;
 
             if(!source.isPlaying)
             {
