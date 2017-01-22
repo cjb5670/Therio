@@ -7,7 +7,7 @@ public class TentacleJoint : MonoBehaviour
     public GameObject blood;
     public int UnitLayer;
     public int WallLayer;
-    public bool CanGrab;
+    public bool CanGrab = false;
 
     public TentacleBase Parent;
 

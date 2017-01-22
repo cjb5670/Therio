@@ -30,6 +30,9 @@ public class BoatAI : Movement
     public AudioClip[] m_Overboard;
     public AudioClip[] m_GroupYell;
 
+    public float ReloadTime;
+    private AudioSource AudioSource; 
+
     #endregion
 
     #region BoatAI Methods
@@ -38,6 +41,7 @@ public class BoatAI : Movement
         _GuysOnBoat = new List<GameObject>();
         m_position = transform.position;
         m_BoatColliderthing.evt_MonsterHitMe += M_BoatColliderthing_evt_MonsterHitMe;
+        AudioSource = this.GetComponent<AudioSource>(); 
     }
 
     private void M_BoatColliderthing_evt_MonsterHitMe(object sender, System.EventArgs e)
@@ -48,7 +52,7 @@ public class BoatAI : Movement
             foreach (var guy in _GuysOnBoat)
             {
                 if (guy == null) continue;
-                guy.GetComponent<GuyScript>().TossGuy(new Vector2(Random.Range(-10, 10), 20));
+                guy.GetComponent<GuyScript>().TossGuy(new Vector2(Random.Range(-20, 20), 20));
             }
         }
     }
@@ -139,12 +143,29 @@ public class BoatAI : Movement
         }; 
 
         _SpawningGuys = false;
+
+        if (!this.AudioSource.isPlaying)
+        {
+            if (Random.Range(0, 3) == 0)
+            {
+                playClip(this.m_AttackClips[Random.Range(0,this.m_AttackClips.Length -1)]);
+            }
+        }
+    }
+
+    public float vol; 
+
+    private void playClip(AudioClip clip)
+    {
+        var getVol = vol * (float)(1 / Vector3.Distance(this.transform.position, m_monster.transform.position));
+        AudioSource.pitch = Random.Range(0.8f, 1);
+        AudioSource.PlayOneShot(clip, getVol);
     }
 
     private IEnumerator ReloadCounter()
     {
         m_reload = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(ReloadTime);
         m_reload = false;
     }
 

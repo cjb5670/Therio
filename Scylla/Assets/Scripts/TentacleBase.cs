@@ -60,6 +60,12 @@ public class TentacleBase : MonoBehaviour {
         TheMouth.evt_HasEatenMarine += TheMouth_evt_HasEatenMarine;
     }
 
+    public bool IsHoldinOntoAWall()
+    {
+        var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
+        return obj.HasGrabbedWall;
+    }
+
     private void TheMouth_evt_HasEatenMarine(object sender, System.EventArgs e)
     {
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
@@ -77,6 +83,18 @@ public class TentacleBase : MonoBehaviour {
     {
         var Wallpoint = this.GetComponent<TargetJoint2D>();
         Wallpoint.enabled = false;
+
+        StartCoroutine(delayCanGrab());
+    }
+
+    private IEnumerator delayCanGrab()
+    {
+        var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
+        obj.CanGrab = false;
+
+        yield return new WaitForSeconds(1);
+
+        obj.CanGrab = true;
     }
 
     private void ShowGlow()

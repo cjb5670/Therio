@@ -6,7 +6,10 @@ public class MonsterLogic : MonoBehaviour {
 
     public TentacleBase[] AllMyArms;
     public KeyCode KeyJump;
-    public float JumpPower; 
+    public float JumpPower;
+
+    public int MaxHealth;
+    public int CurrentHealth; 
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +18,18 @@ public class MonsterLogic : MonoBehaviour {
 
     public void DoJump()
     {
+        bool hit = false;
+        foreach (var arms in AllMyArms)
+        {
+            if (arms.IsHoldinOntoAWall())
+            {
+                hit = true;
+            }
+        }
+
+        if (!hit) return; 
 
         Vector3 inFront = (transform.localRotation * new Vector3(0, 1, 1)) * JumpPower;
-        Debug.Log(string.Format("magdir x:{0}, y:{1}", inFront.x, inFront.y));
-
         foreach (var arms in AllMyArms)
         {
             arms.ReleaseFromWall(); 
@@ -29,6 +40,30 @@ public class MonsterLogic : MonoBehaviour {
 
     }
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Spear")
+        {
+            CurrentHealth--;
+            CheckForDeath(); 
+            StartCoroutine(DestroyTimer(coll.gameObject));
+        }
+    }
+
+    private void CheckForDeath()
+    {
+        if (CurrentHealth <= 0)
+        {
+            DestroyTimer(this.gameObject);
+        }
+    }
+
+    private IEnumerator DestroyTimer(GameObject obj)
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(obj);
+    }
+    
     // Update is called once per frame
     void Update()
     {
