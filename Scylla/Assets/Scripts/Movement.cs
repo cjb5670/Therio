@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic; 
 
 public class Movement : MonoBehaviour
 {
@@ -19,12 +20,27 @@ public class Movement : MonoBehaviour
         m_acceleration += force / m_mass;
     }
 
-    protected void CalculateForces()
+    protected void CalculateForces(List<GameObject> otherObjects = null)
     {
         m_position = transform.position;
+
         m_velocity += m_acceleration * Time.deltaTime;
         m_position += m_velocity * Time.deltaTime;
         transform.position = m_position;
+
+        //Applies the force to the other objects
+        if(otherObjects != null)
+        {
+            Debug.Log("Guys on boat? " + otherObjects.Count);
+            foreach (var obj in otherObjects)
+            {
+                if (obj == null) continue; 
+                var m_position = obj.transform.position;
+                m_velocity += m_acceleration * Time.deltaTime;
+                m_position += m_velocity * Time.deltaTime;
+                obj.transform.position = m_position;
+            }
+        }
 
         m_acceleration = Vector3.zero;
     }

@@ -221,11 +221,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &266652592 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1209040505036192, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
-    type: 2}
-  m_PrefabInternal: {fileID: 916561934}
 --- !u!1001 &390342604
 Prefab:
   m_ObjectHideFlags: 0
@@ -326,7 +321,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.355038, y: -163.52692, z: 5.9885545}
+  m_LocalPosition: {x: 30.575838, y: -49.641487, z: 4.450368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -379,19 +374,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114984522346594406, guid: 3a70eb02cac5a07479b94c2454485bac,
+    - target: {fileID: 114273556114477726, guid: 3a70eb02cac5a07479b94c2454485bac,
         type: 2}
-      propertyPath: Monster
+      propertyPath: m_monster
       value: 
       objectReference: {fileID: 1660375931}
     - target: {fileID: 114984522346594406, guid: 3a70eb02cac5a07479b94c2454485bac,
         type: 2}
-      propertyPath: Marine
-      value: 
-      objectReference: {fileID: 266652592}
-    - target: {fileID: 114273556114477726, guid: 3a70eb02cac5a07479b94c2454485bac,
-        type: 2}
-      propertyPath: m_monster
+      propertyPath: Monster
       value: 
       objectReference: {fileID: 1660375931}
     - target: {fileID: 1506111919894032, guid: 3a70eb02cac5a07479b94c2454485bac, type: 2}
@@ -513,11 +503,6 @@ Prefab:
       propertyPath: Monster
       value: 
       objectReference: {fileID: 1660375931}
-    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
-        type: 2}
-      propertyPath: vol
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
   m_IsPrefabParent: 0

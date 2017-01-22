@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GuyScript : MonoBehaviour
 {
+    public event System.EventHandler evt_Drowning; 
+    public event System.EventHandler evt_Eaten; 
+
+
     public float WaterLevel;
     public float NotInWaterDrag;
     public float InWaterDrag;
@@ -16,6 +20,8 @@ public class GuyScript : MonoBehaviour
     private AudioSource source;
     private Rigidbody2D rig;
 
+    private List<GameObject> GuysOnShip;
+
     // Use this for initialization
     void Start()
     {
@@ -25,8 +31,15 @@ public class GuyScript : MonoBehaviour
 
     public void IsEaten()
     {
-        Debug.Log("I got eaten");
+        if (this.evt_Eaten != null) this.evt_Eaten(this, new System.EventArgs());
         Destroy(this.gameObject);
+    }
+
+    public void TossGuy(Vector2 givenVector)
+    {
+        rig.AddForce(givenVector);
+        var loc = Random.Range(0, 4);
+        playClip(YellingClips[loc]);
     }
 
     private void playClip(AudioClip clip)
@@ -54,6 +67,7 @@ public class GuyScript : MonoBehaviour
 
             if(!source.isPlaying)
             {
+                if (this.evt_Drowning != null) evt_Drowning(this, new System.EventArgs());
                 var loc = Random.Range(0, 4);
                 playClip(DrowningClips[loc]);
             }
@@ -61,9 +75,7 @@ public class GuyScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            rig.AddForce(new Vector2(Random.Range(-10,10), 20));
-            var loc = Random.Range(0, 4);
-            playClip(YellingClips[loc]);
+            TossGuy(new Vector2(Random.Range(-10, 10), 20));
         }
 
     }
