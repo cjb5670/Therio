@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 public class Monster_Mouth : MonoBehaviour
 {
+    public GameObject blood;
+    public event EventHandler evt_HasEatenMarine;
+    public readonly GameObject EatingMarine;
+
     // Use this for initialization
     void Start()
     {
@@ -13,9 +18,13 @@ public class Monster_Mouth : MonoBehaviour
     {
         if (coll.gameObject.tag == "Marine")
         {
-            coll.gameObject.GetComponent<GuyScript>().IsEaten();
+            var obj = coll.gameObject.GetComponent<GuyScript>();
+            if (obj == null) return; 
+
+            obj.IsEaten();
+            blood.active = true;
         }
-    }   
+    }
 
     // Update is called once per frame
     void Update()
