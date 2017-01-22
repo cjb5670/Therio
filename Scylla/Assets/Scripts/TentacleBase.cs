@@ -11,6 +11,7 @@ public class TentacleBase : MonoBehaviour {
     public Monster_Mouth TheMouth; 
 
     private GameObject LastTentacle;
+    private GameObject WhatIamHolding; 
     private System.Action DoingMove; 
 
     // Use this for initialization
@@ -56,7 +57,6 @@ public class TentacleBase : MonoBehaviour {
     private void TheMouth_evt_HasEatenMarine(object sender, System.EventArgs e)
     {
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
-        obj.ReleaseUnit();
     }
 
     public void PullToWall( Vector3 location)

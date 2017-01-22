@@ -56,6 +56,7 @@ public class TentacleJoint : MonoBehaviour
             Grabber = () => 
             {
                 if (mainObj.gameObject != null) mainObj.transform.position = this.transform.position;
+                else this.ReleaseUnit();
             };
 
             this.HasGrabbedPerson = true;
@@ -76,9 +77,6 @@ public class TentacleJoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanGrab)
-            Debug.Log("I can grab");
-
         if (Grabber != null) Grabber();
     }
 

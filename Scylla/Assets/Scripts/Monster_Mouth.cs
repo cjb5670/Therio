@@ -27,9 +27,17 @@ public class Monster_Mouth : MonoBehaviour
             obj.IsEaten();
             EatingMarine = null;
 
-            blood.SetActive(true);
-            
+            var BloodSplatter = Instantiate(blood, blood.transform.position, Quaternion.identity);
+            BloodSplatter.SetActive(true);
+            StartCoroutine(DestroyTimer(BloodSplatter, 2.5f));
+
         }
+    }
+
+    private IEnumerator DestroyTimer(GameObject toDestroy, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(toDestroy);
     }
 
     // Update is called once per frame
