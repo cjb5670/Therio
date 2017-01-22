@@ -169,7 +169,93 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: polySurface2
+        weight: 1
+      - path: polySurface3
+        weight: 1
+      - path: polySurface4
+        weight: 1
+      - path: polySurface5
+        weight: 1
+      - path: polySurface6
+        weight: 1
+      - path: polySurface7
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface9
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface11
+        weight: 1
+      - path: polySurface12
+        weight: 1
+      - path: polySurface26
+        weight: 1
+      - path: polySurface28
+        weight: 1
+      - path: polySurface29
+        weight: 1
+      - path: polySurface31
+        weight: 1
+      - path: polySurface32
+        weight: 1
+      - path: polySurface33
+        weight: 1
+      - path: polySurface34
+        weight: 1
+      - path: polySurface35
+        weight: 1
+      - path: polySurface36
+        weight: 1
+      - path: polySurface37
+        weight: 1
+      - path: polySurface38
+        weight: 1
+      - path: polySurface39
+        weight: 1
+      - path: polySurface40
+        weight: 1
+      - path: polySurface41
+        weight: 1
+      - path: polySurface42
+        weight: 1
+      - path: polySurface43
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
