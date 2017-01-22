@@ -67,13 +67,14 @@ public class TerrainSet : MonoBehaviour
 
 		Terrain.activeTerrain.terrainData.SetHeights(0, 0, heights);
 
-        var c = this.GetComponent<PolygonCollider2D>();
+        var c = GetComponent<PolygonCollider2D>();
 
         var test = new Vector2[KeyPoints.Count];
-        for (int i = 1; i < KeyPoints.Count; i++)
+        for (int i = 0; i < KeyPoints.Count; i++)
         {
             test[i] = new Vector2(i,  KeyPoints[i] * 10);
         }
+		test[KeyPoints.Count - 1].y = 0;
         c.points = test;
     }
 
