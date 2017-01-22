@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: eb6f6ff27e18b114581e10d23a8bcd6d
+timeCreated: 1485061923
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Thor
+  fontNames:
+  - Thor
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
