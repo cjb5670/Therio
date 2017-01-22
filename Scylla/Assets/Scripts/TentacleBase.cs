@@ -62,10 +62,7 @@ public class TentacleBase : MonoBehaviour {
 
     public bool IsHoldinOntoAWall()
     {
-        Debug.Log("afdsfadsfasdfadfds");
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
-
-                Debug.Log("HAsd grabbedf wall dsa fasd f asd fa sdf a dsf? " + obj.HasGrabbedWall.ToString());
         return obj.HasGrabbedWall;
     }
 
