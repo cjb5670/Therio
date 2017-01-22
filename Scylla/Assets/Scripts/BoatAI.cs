@@ -21,6 +21,7 @@ public class BoatAI : Movement
     public GameObject m_monster;
     public GameObject m_boat;
     public BoatSpawn m_Spawner;
+    public BoatColliderLogic m_BoatColliderthing;
     public int MaxGuysOnBoat;
     public int Max_Health;
     public int Current_Health;
@@ -36,8 +37,22 @@ public class BoatAI : Movement
     {
         _GuysOnBoat = new List<GameObject>();
         m_position = transform.position;
+        m_BoatColliderthing.evt_MonsterHitMe += M_BoatColliderthing_evt_MonsterHitMe;
     }
-    
+
+    private void M_BoatColliderthing_evt_MonsterHitMe(object sender, System.EventArgs e)
+    {
+        lock (Locker_GuysOnBoat)
+        {
+            //Toss the guys around
+            foreach (var guy in _GuysOnBoat)
+            {
+                if (guy == null) continue;
+                guy.GetComponent<GuyScript>().TossGuy(new Vector2(Random.Range(-10, 10), 20));
+            }
+        }
+    }
+
     void Update()
     {
         if (m_fleeing)

@@ -321,7 +321,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.575838, y: -49.641487, z: 4.450368}
+  m_LocalPosition: {x: 43.800373, y: -17.778166, z: 9.617351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -694,6 +694,10 @@ Prefab:
     - target: {fileID: 4458419471148878, guid: 21d6f2ceeab8f79479ccf2fc3a80f318, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678668669276144, guid: 21d6f2ceeab8f79479ccf2fc3a80f318, type: 2}
+      propertyPath: m_TagString
+      value: MonsterHead
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21d6f2ceeab8f79479ccf2fc3a80f318, type: 2}

@@ -31,7 +31,6 @@ public class Movement : MonoBehaviour
         //Applies the force to the other objects
         if(otherObjects != null)
         {
-            Debug.Log("Guys on boat? " + otherObjects.Count);
             foreach (var obj in otherObjects)
             {
                 if (obj == null) continue; 
