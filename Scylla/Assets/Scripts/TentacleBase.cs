@@ -8,16 +8,19 @@ public class TentacleBase : MonoBehaviour {
     public int segments;
     public float speed;
     public KeyCode key;
-    public Monster_Mouth TheMouth; 
-
+    public Monster_Mouth TheMouth;
+    public Color GlowColor; 
+    
     private GameObject LastTentacle;
     private GameObject WhatIamHolding; 
-    private System.Action DoingMove; 
+    private System.Action DoingMove;
+    private List<GameObject> tentacleChain; 
 
     // Use this for initialization
     void Start()
     {
         var myRidgid = this.GetComponent<Rigidbody2D>();
+        tentacleChain = new List<GameObject>(); 
 
         //Create the chain :O 
         GameObject prevObj = null;
@@ -45,6 +48,9 @@ public class TentacleBase : MonoBehaviour {
 
             prevObj = link;
             LastTentacle = link;
+
+            //adds it to the chain 
+            tentacleChain.Add(link);
         }
 
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
@@ -73,6 +79,24 @@ public class TentacleBase : MonoBehaviour {
         Wallpoint.enabled = false;
     }
 
+    private void ShowGlow()
+    {
+        foreach (var link in this.tentacleChain)
+        {
+            Behaviour halo = (Behaviour)link.GetComponent("Halo");
+            halo.enabled = true;
+        }
+    }
+   
+    private void HideGlow()
+    {
+        foreach (var link in this.tentacleChain)
+        {
+            Behaviour halo = (Behaviour)link.GetComponent("Halo");
+            halo.enabled = false;
+        }
+    }
+    
     private void MoveTentacle(Vector3 targetPosition, Vector3 RootPosition,  GameObject tentacleSegment, float speed)
     {
         tentacleSegment.GetComponent<TargetJoint2D>().target = Vector3.Lerp(tentacleSegment.GetComponent<TargetJoint2D>().target, targetPosition, speed * Time.deltaTime);
@@ -116,6 +140,11 @@ public class TentacleBase : MonoBehaviour {
                 MoveTentacle(Camera.main.ScreenToWorldPoint(pos), this.transform.position, LastTentacle, speed);
             }
         }
+
+        if (Input.GetKey(this.key))
+            ShowGlow();
+        else
+            HideGlow(); 
 
         if (Input.GetKey(KeyCode.Space))
         {

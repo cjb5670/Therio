@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114449469436596440}
   - component: {fileID: 231328072977543816}
   - component: {fileID: 257121357194684232}
+  - component: {fileID: 122076599332108084}
   m_Layer: 0
   m_Name: Tentacle
   m_TagString: Untagged
@@ -225,7 +226,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 1
-  m_Mass: 0.1
+  m_Mass: 0.07070087
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0.3
@@ -264,6 +265,17 @@ MonoBehaviour:
   WallLayer: 10
   CanGrab: 0
   Parent: {fileID: 0}
+--- !u!122 &122076599332108084
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203484367785208}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4291405973
+  m_Size: 0.3
 --- !u!198 &198562965540431770
 ParticleSystem:
   m_ObjectHideFlags: 1

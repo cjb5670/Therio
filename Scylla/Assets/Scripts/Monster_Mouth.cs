@@ -18,8 +18,6 @@ public class Monster_Mouth : MonoBehaviour
     {
         if (coll.gameObject.tag == "Marine")
         {
-            Debug.Log("Eating a Marine");
-
             var obj = coll.gameObject.GetComponent<GuyScript>();
             if (obj == null) return;
 
