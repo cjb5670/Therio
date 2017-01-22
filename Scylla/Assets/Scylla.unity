@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c8c9f75ec96594788fa92a326b6e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 0}
 --- !u!1 &265337376
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +727,18 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c325ab4fab520b54fac76afff847d3f3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d99793f14604ed42a7682ca04a1a979, type: 2}
+    - target: {fileID: 2300002, guid: c325ab4fab520b54fac76afff847d3f3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d99793f14604ed42a7682ca04a1a979, type: 2}
+    - target: {fileID: 2300052, guid: c325ab4fab520b54fac76afff847d3f3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d99793f14604ed42a7682ca04a1a979, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c325ab4fab520b54fac76afff847d3f3, type: 3}
   m_IsPrefabParent: 0
@@ -1117,6 +1130,7 @@ GameObject:
   - component: {fileID: 579793924}
   - component: {fileID: 579793925}
   - component: {fileID: 579793928}
+  - component: {fileID: 579793929}
   m_Layer: 0
   m_Name: MainBody
   m_TagString: Untagged
@@ -1214,6 +1228,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03, y: 0.13}
   m_Size: {x: 1, y: 1.44}
   m_Direction: 0
+--- !u!81 &579793929
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579793923}
+  m_Enabled: 1
 --- !u!1 &630842759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1293,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.7, y: -13.901006, z: 6.9010043}
+  m_LocalPosition: {x: 10.109293, y: -14.84433, z: 9.569199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4436,6 +4457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c8c9f75ec96594788fa92a326b6e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 0}
 --- !u!50 &1336351403
 Rigidbody2D:
   serializedVersion: 4
@@ -4708,6 +4730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c8c9f75ec96594788fa92a326b6e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 0}
 --- !u!257 &1556040265
 TargetJoint2D:
   m_ObjectHideFlags: 0
@@ -7821,7 +7844,6 @@ GameObject:
   - component: {fileID: 1767626478}
   - component: {fileID: 1767626477}
   - component: {fileID: 1767626476}
-  - component: {fileID: 1767626475}
   - component: {fileID: 1767626480}
   m_Layer: 0
   m_Name: Main Camera
@@ -7830,13 +7852,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1767626475
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1767626474}
-  m_Enabled: 1
 --- !u!124 &1767626476
 Behaviour:
   m_ObjectHideFlags: 0
