@@ -795,7 +795,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.58, y: 0.81}
+  m_Size: {x: 0.97, y: 1.27}
   m_Direction: 0
 --- !u!70 &70699056362171654
 CapsuleCollider2D:
@@ -855,8 +855,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b77a9e016c627d479b5ea9ea369f8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllMyArms: []
-  KeyJump: 122
+  AllMyArms:
+  - {fileID: 114633467901672824}
+  - {fileID: 114971636611573016}
+  - {fileID: 114554611515747500}
+  - {fileID: 114803215181546612}
+  KeyJump: 32
   JumpPower: 5000
 --- !u!114 &114554611515747500
 MonoBehaviour:

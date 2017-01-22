@@ -65,7 +65,7 @@ public class TentacleBase : MonoBehaviour {
         Debug.Log("afdsfadsfasdfadfds");
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
 
-                Debug.Log("HAsd grabbedf wall dsa fasd f asd fa sdf a dsf? " + obj.HasGrabbedWall);
+                Debug.Log("HAsd grabbedf wall dsa fasd f asd fa sdf a dsf? " + obj.HasGrabbedWall.ToString());
         return obj.HasGrabbedWall;
     }
 
@@ -86,6 +86,18 @@ public class TentacleBase : MonoBehaviour {
     {
         var Wallpoint = this.GetComponent<TargetJoint2D>();
         Wallpoint.enabled = false;
+
+        StartCoroutine(delayCanGrab());
+    }
+
+    private IEnumerator delayCanGrab()
+    {
+        var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
+        obj.CanGrab = false;
+
+        yield return new WaitForSeconds(1);
+
+        obj.CanGrab = true;
     }
 
     private void ShowGlow()
