@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuyScript : MonoBehaviour {
-
-    public GameObject blood;
-
+public class Monster_Mouth : MonoBehaviour
+{
     // Use this for initialization
     void Start()
     {
-
     }
 
-    public void IsEaten()
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        blood.active = true;
-    }
+        if (coll.gameObject.tag == "Marine")
+        {
+            coll.gameObject.GetComponent<GuyScript>().IsEaten();
+        }
+    }   
 
     // Update is called once per frame
     void Update()
