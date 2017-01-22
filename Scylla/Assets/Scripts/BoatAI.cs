@@ -30,9 +30,8 @@ public class BoatAI : Movement
     public AudioClip[] m_Overboard;
     public AudioClip[] m_GroupYell;
 
-    public float ReloadTime; 
-
-    private AudioSource AudioSource;
+    public float ReloadTime;
+    private AudioSource AudioSource; 
 
     #endregion
 
@@ -53,7 +52,7 @@ public class BoatAI : Movement
             foreach (var guy in _GuysOnBoat)
             {
                 if (guy == null) continue;
-                guy.GetComponent<GuyScript>().TossGuy(new Vector2(Random.Range(-10, 10), 20));
+                guy.GetComponent<GuyScript>().TossGuy(new Vector2(Random.Range(-20, 20), 20));
             }
         }
     }
