@@ -6,6 +6,7 @@ public class MarineAnimation : MonoBehaviour
 {
     #region MarineAnimation Member Variables
     private Animator m_animator;
+    public GameObject m_guy;
     #endregion
 
     #region MarineAnimation Methods
@@ -16,7 +17,7 @@ public class MarineAnimation : MonoBehaviour
 
     void Update()
     {
-        m_animator.SetBool("drowning", GetComponent<GuyScript>().drowning);
+        m_animator.SetBool("drowning", m_guy.GetComponent<GuyScript>().drowning);
     }
     #endregion
 }
