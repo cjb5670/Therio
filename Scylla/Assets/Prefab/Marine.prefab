@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 61747020267084820}
   - component: {fileID: 114000454243368140}
   - component: {fileID: 231772559011396072}
+  - component: {fileID: 82099406411965406}
   m_Layer: 9
   m_Name: Marine
   m_TagString: Marine
@@ -88,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209040505036192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.07, y: 8.91, z: 0}
+  m_LocalPosition: {x: 8.03, y: 8.91, z: 0}
   m_LocalScale: {x: 0.2, y: 0.59, z: 1}
   m_Children:
   - {fileID: 4095314409536220}
@@ -246,6 +247,86 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!82 &82099406411965406
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209040505036192}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000454243368140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +341,20 @@ MonoBehaviour:
   WaterLevel: 7.7
   NotInWaterDrag: 0
   InWaterDrag: 60
+  vol: 0.05
+  DrowningClips:
+  - {fileID: 8300000, guid: e1d7866e4e21de848bf13174a8429bb4, type: 3}
+  - {fileID: 8300000, guid: 31fc1535f7133b042819432539726f8a, type: 3}
+  - {fileID: 8300000, guid: 9dceaddd66c408d48b101fcae0a85423, type: 3}
+  - {fileID: 8300000, guid: 39e64cd8214dd1b42856292db4e0549c, type: 3}
+  - {fileID: 8300000, guid: a3bd7ff58d7cc1b428133dee14435833, type: 3}
+  YellingClips:
+  - {fileID: 8300000, guid: 7944c4566cdef1248b70fd21739ad96b, type: 3}
+  - {fileID: 8300000, guid: 1b176884dac3c7f48bb39e076fd66b70, type: 3}
+  - {fileID: 8300000, guid: 899d9bcca19170d418aeddf63b232ce3, type: 3}
+  - {fileID: 8300000, guid: 23cb2a930adb1834a92e74919448d4c3, type: 3}
+  - {fileID: 8300000, guid: bb100970bcebd9b42ada4f9dcf9fc429, type: 3}
+  Monster: {fileID: 0}
 --- !u!198 &198082595937406050
 ParticleSystem:
   m_ObjectHideFlags: 1

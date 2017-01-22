@@ -860,6 +860,7 @@ MonoBehaviour:
   speed: 5
   key: 101
   TheMouth: {fileID: 114100643342124220}
+  GlowColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114633467901672824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -877,6 +878,7 @@ MonoBehaviour:
   speed: 5
   key: 113
   TheMouth: {fileID: 114100643342124220}
+  GlowColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114803215181546612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -894,6 +896,7 @@ MonoBehaviour:
   speed: 5
   key: 114
   TheMouth: {fileID: 114100643342124220}
+  GlowColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114971636611573016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -911,6 +914,7 @@ MonoBehaviour:
   speed: 5
   key: 119
   TheMouth: {fileID: 114100643342124220}
+  GlowColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!198 &198207132633514442
 ParticleSystem:
   m_ObjectHideFlags: 1

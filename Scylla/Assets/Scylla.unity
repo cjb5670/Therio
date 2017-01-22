@@ -345,16 +345,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 122076599332108084, guid: 796fa60093487bb41ab7289ab7f98254,
-        type: 2}
-      propertyPath: m_Color.rgba
-      value: 4291405973
-      objectReference: {fileID: 0}
-    - target: {fileID: 122076599332108084, guid: 796fa60093487bb41ab7289ab7f98254,
-        type: 2}
-      propertyPath: m_Size
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796fa60093487bb41ab7289ab7f98254, type: 2}
   m_IsPrefabParent: 0
@@ -416,7 +406,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.65554, y: -9.452491, z: 9.943751}
+  m_LocalPosition: {x: 7.7637444, y: -2.9873965, z: 8.607849}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -597,6 +587,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
         type: 2}
+      propertyPath: YellingClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
       propertyPath: DrowningClips.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -674,8 +669,33 @@ Prefab:
       objectReference: {fileID: 1660375931}
     - target: {fileID: 1209040505036192, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
+      propertyPath: YellingClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7944c4566cdef1248b70fd21739ad96b, type: 3}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
+      propertyPath: YellingClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b176884dac3c7f48bb39e076fd66b70, type: 3}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
+      propertyPath: YellingClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 899d9bcca19170d418aeddf63b232ce3, type: 3}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
+      propertyPath: YellingClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 23cb2a930adb1834a92e74919448d4c3, type: 3}
+    - target: {fileID: 114000454243368140, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
+        type: 2}
+      propertyPath: YellingClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: bb100970bcebd9b42ada4f9dcf9fc429, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
   m_IsPrefabParent: 0
