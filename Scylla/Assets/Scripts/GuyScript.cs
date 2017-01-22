@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuyScript : MonoBehaviour {
-
-    public GameObject blood;
+public class GuyScript : MonoBehaviour
+{
 
     // Use this for initialization
     void Start()
@@ -14,7 +13,7 @@ public class GuyScript : MonoBehaviour {
 
     public void IsEaten()
     {
-        blood.active = true;
+        Destroy(this.gameObject);
     }
 
     // Update is called once per frame
