@@ -822,6 +822,7 @@ MonoBehaviour:
   segments: 10
   speed: 5
   key: 101
+  TheMouth: {fileID: 114100643342124220}
 --- !u!114 &114633467901672824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,6 +839,7 @@ MonoBehaviour:
   segments: 10
   speed: 5
   key: 113
+  TheMouth: {fileID: 114100643342124220}
 --- !u!114 &114803215181546612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -854,6 +856,7 @@ MonoBehaviour:
   segments: 10
   speed: 5
   key: 114
+  TheMouth: {fileID: 114100643342124220}
 --- !u!114 &114971636611573016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -870,6 +873,7 @@ MonoBehaviour:
   segments: 10
   speed: 5
   key: 119
+  TheMouth: {fileID: 114100643342124220}
 --- !u!198 &198207132633514442
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -879,7 +883,7 @@ ParticleSystem:
   serializedVersion: 5
   lengthInSec: 5
   speed: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1

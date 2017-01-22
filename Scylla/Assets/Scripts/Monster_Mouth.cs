@@ -7,7 +7,7 @@ public class Monster_Mouth : MonoBehaviour
 {
     public GameObject blood;
     public event EventHandler evt_HasEatenMarine;
-    public readonly GameObject EatingMarine;
+    public GameObject EatingMarine { get; private set; }
 
     // Use this for initialization
     void Start()
@@ -18,11 +18,17 @@ public class Monster_Mouth : MonoBehaviour
     {
         if (coll.gameObject.tag == "Marine")
         {
-            var obj = coll.gameObject.GetComponent<GuyScript>();
-            if (obj == null) return; 
+            Debug.Log("Eating a Marine");
 
+            var obj = coll.gameObject.GetComponent<GuyScript>();
+            if (obj == null) return;
+
+            evt_HasEatenMarine(this,new EventArgs());
             obj.IsEaten();
-            blood.active = true;
+            EatingMarine = null;
+
+            blood.SetActive(true);
+            
         }
     }
 

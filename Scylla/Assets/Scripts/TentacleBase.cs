@@ -8,8 +8,10 @@ public class TentacleBase : MonoBehaviour {
     public int segments;
     public float speed;
     public KeyCode key;
+    public Monster_Mouth TheMouth; 
 
     private GameObject LastTentacle;
+    private System.Action DoingMove; 
 
     // Use this for initialization
     void Start()
@@ -30,8 +32,6 @@ public class TentacleBase : MonoBehaviour {
 
             joint = link.GetComponent<HingeJoint2D>();
           
-         
-              
             if (prevObj == null)
             {
                 joint.connectedBody = myRidgid;
@@ -49,6 +49,14 @@ public class TentacleBase : MonoBehaviour {
         var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
         obj.CanGrab = true;
         var rig = LastTentacle.GetComponent<Rigidbody2D>();
+
+        TheMouth.evt_HasEatenMarine += TheMouth_evt_HasEatenMarine;
+    }
+
+    private void TheMouth_evt_HasEatenMarine(object sender, System.EventArgs e)
+    {
+        var obj = LastTentacle.GetComponent(typeof(TentacleJoint)) as TentacleJoint;
+        obj.ReleaseUnit();
     }
 
     public void PullToWall( Vector3 location)
@@ -89,11 +97,6 @@ public class TentacleBase : MonoBehaviour {
         };
     }
 
-    private Vector3 mouseTarget;
-    private Vector3 mouseTarget2;
-
-    private System.Action DoingMove; 
-
     // Update is called once per frame
     void Update()
     {
@@ -110,9 +113,7 @@ public class TentacleBase : MonoBehaviour {
             {
                 var pos = Input.mousePosition;
                 pos.z = 47;
-
-                mouseTarget = Camera.main.ScreenToWorldPoint(pos);
-                MoveTentacle(mouseTarget, this.transform.position, LastTentacle, speed);
+                MoveTentacle(Camera.main.ScreenToWorldPoint(pos), this.transform.position, LastTentacle, speed);
             }
         }
 

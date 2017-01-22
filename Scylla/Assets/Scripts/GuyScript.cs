@@ -13,6 +13,7 @@ public class GuyScript : MonoBehaviour
 
     public void IsEaten()
     {
+        Debug.Log("I got eaten");
         Destroy(this.gameObject);
     }
 

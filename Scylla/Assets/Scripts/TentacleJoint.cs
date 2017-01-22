@@ -55,7 +55,7 @@ public class TentacleJoint : MonoBehaviour
 
             Grabber = () => 
             {
-                mainObj.transform.position = this.transform.position;
+                if (mainObj.gameObject != null) mainObj.transform.position = this.transform.position;
             };
 
             this.HasGrabbedPerson = true;
