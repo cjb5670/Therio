@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4130792771619156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Model '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4796545940252680}
   - component: {fileID: 70696384881189380}
   - component: {fileID: 114100643342124220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Monster_Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4993852550838254}
   - component: {fileID: 198207132633514442}
   - component: {fileID: 199518736567176134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SimpleBlood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164386582164246}
   - component: {fileID: 81805717289615156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Audio Listener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4464063773005588}
   - component: {fileID: 33002924857298984}
   - component: {fileID: 23172330551572748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eyes_obj:pCube7_Eyes_obj:polySurface2_Mesh1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 50360739591514984}
   - component: {fileID: 70152579136863356}
   - component: {fileID: 114483273763923862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Monster
   m_TagString: MonsterHead
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 4761155494041250}
   - component: {fileID: 33606986819760146}
   - component: {fileID: 23890669460294816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mesh1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025205169517740}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.029999971, y: -0.53, z: 0}
+  m_LocalPosition: {x: 0.029999971, y: -0.53, z: -1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4761155494041250}
@@ -795,7 +795,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.58, y: 0.81}
+  m_Size: {x: 0.97, y: 1.27}
   m_Direction: 0
 --- !u!70 &70699056362171654
 CapsuleCollider2D:
@@ -855,8 +855,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b77a9e016c627d479b5ea9ea369f8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllMyArms: []
-  KeyJump: 122
+  AllMyArms:
+  - {fileID: 114633467901672824}
+  - {fileID: 114971636611573016}
+  - {fileID: 114554611515747500}
+  - {fileID: 114803215181546612}
+  KeyJump: 32
   JumpPower: 5000
 --- !u!114 &114554611515747500
 MonoBehaviour:

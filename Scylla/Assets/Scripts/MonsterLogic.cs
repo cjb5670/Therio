@@ -15,10 +15,18 @@ public class MonsterLogic : MonoBehaviour {
 
     public void DoJump()
     {
+        bool hit = false;
+        foreach (var arms in AllMyArms)
+        {
+            if (arms.IsHoldinOntoAWall())
+            {
+                hit = true;
+            }
+        }
+
+        if (!hit) return; 
 
         Vector3 inFront = (transform.localRotation * new Vector3(0, 1, 1)) * JumpPower;
-        Debug.Log(string.Format("magdir x:{0}, y:{1}", inFront.x, inFront.y));
-
         foreach (var arms in AllMyArms)
         {
             arms.ReleaseFromWall(); 
