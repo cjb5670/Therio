@@ -8,10 +8,10 @@ public class BoatAI : Movement
     private const float MIN_DISTANCE = 2;
     private const float IN_RANGE = 4.5f;
     private bool m_fleeing = false;
-    private bool m_attacking = false;
     private bool m_reload = false;
     private Vector3 m_target;
 
+    public bool m_attacking = false;
     public GameObject m_spear;
     public GameObject m_monster;
     public GameObject m_boat;
