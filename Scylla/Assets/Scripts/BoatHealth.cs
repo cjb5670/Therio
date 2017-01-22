@@ -7,6 +7,7 @@ public class BoatHealth : MonoBehaviour
     public float m_maxHealth;
     public float m_curHealth;
     public GameObject m_healthBar;
+    public BoatAI boatAi; 
     #endregion
 
     #region BoatHealth Methods
@@ -18,7 +19,7 @@ public class BoatHealth : MonoBehaviour
     
     void Update()
     {
-        //m_curHealth = GetComponent<BoatAI>().currentHealth;
+        m_curHealth = boatAi.Current_Health;
         SetHealthBar(m_curHealth / m_maxHealth);
     }
 
