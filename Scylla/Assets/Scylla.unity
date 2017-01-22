@@ -215,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218071403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.72201, y: -40.42294, z: 7.3489113}
+  m_LocalPosition: {x: 43.868347, y: -21.21388, z: 6.852623}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -225,7 +225,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 1209040505036192, guid: 2f1d9ea8207606d4ebdc84c5f4912e55,
     type: 2}
-  m_PrefabInternal: {fileID: 1372800331}
+  m_PrefabInternal: {fileID: 916561934}
 --- !u!1001 &390342604
 Prefab:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630842759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.25147, y: -5.1101923, z: 8.660472}
+  m_LocalPosition: {x: 48.42983, y: -31.912752, z: 10.99608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -379,6 +379,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114241621375532284, guid: 3a70eb02cac5a07479b94c2454485bac,
+        type: 2}
+      propertyPath: Monster
+      value: 
+      objectReference: {fileID: 1660375931}
     - target: {fileID: 114273556114477726, guid: 3a70eb02cac5a07479b94c2454485bac,
         type: 2}
       propertyPath: m_monster
@@ -397,30 +402,6 @@ Prefab:
     - target: {fileID: 1506111919894032, guid: 3a70eb02cac5a07479b94c2454485bac, type: 2}
       propertyPath: m_Name
       value: 'Boat '
-      objectReference: {fileID: 0}
-    - target: {fileID: 82096083294915306, guid: 3a70eb02cac5a07479b94c2454485bac,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82096083294915306, guid: 3a70eb02cac5a07479b94c2454485bac,
-        type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82096083294915306, guid: 3a70eb02cac5a07479b94c2454485bac,
-        type: 2}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82096083294915306, guid: 3a70eb02cac5a07479b94c2454485bac,
-        type: 2}
-      propertyPath: BypassReverbZones
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1506111919894032, guid: 3a70eb02cac5a07479b94c2454485bac, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a70eb02cac5a07479b94c2454485bac, type: 2}
@@ -493,138 +474,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &999494934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 999494936}
-  - component: {fileID: 999494935}
-  m_Layer: 0
-  m_Name: Water Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &999494935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 999494934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f5990c85caf2a4294edd7c7d01e1f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_isMoving: 0
-  m_scale: 0.1
-  m_speed: 1
-  m_waveDistance: 1
-  m_noiseStrength: 1
-  m_noiseWalk: 1
---- !u!4 &999494936
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 999494934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1102057721 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1506111919894032, guid: 3a70eb02cac5a07479b94c2454485bac,
-    type: 2}
-  m_PrefabInternal: {fileID: 645203530}
---- !u!82 &1102057728
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1102057721}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e12c7d96d709c644cad90a2d621e8002, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.131
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!1001 &1372800331
+--- !u!1001 &916561934
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -671,6 +521,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f1d9ea8207606d4ebdc84c5f4912e55, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &999494934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 999494936}
+  - component: {fileID: 999494935}
+  m_Layer: 0
+  m_Name: Water Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &999494935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999494934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f5990c85caf2a4294edd7c7d01e1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isMoving: 0
+  m_scale: 0.1
+  m_speed: 1
+  m_waveDistance: 1
+  m_noiseStrength: 1
+  m_noiseWalk: 1
+--- !u!4 &999494936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999494934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660375931 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1678668669276144, guid: 21d6f2ceeab8f79479ccf2fc3a80f318,

@@ -21,5 +21,6 @@ public class UIManager : MonoBehaviour
 	public void LoadScene(string scene)
 	{
 		SceneManager.LoadSceneAsync(scene);
+		
 	}
 }
