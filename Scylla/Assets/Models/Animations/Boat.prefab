@@ -2266,6 +2266,7 @@ MonoBehaviour:
   m_monster: {fileID: 0}
   m_boat: {fileID: 1330985142662514}
   m_Spawner: {fileID: 114984522346594406}
+  m_BoatColliderthing: {fileID: 114712643934348160}
   MaxGuysOnBoat: 10
   Max_Health: 100
   Current_Health: 100
@@ -2283,6 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76f5dae51f6674682879a26e136045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velThreshold: 0
 --- !u!114 &114855716907462138
 MonoBehaviour:
   m_ObjectHideFlags: 1
